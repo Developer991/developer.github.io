@@ -1,0 +1,29 @@
+<html>
+	<head>
+	<title>[P.K] License admin</title>
+	</head>
+	<body>
+
+	<?php
+
+	// Открыть текстовый файл
+	$f = fopen("licens.txt", "a+t");
+
+	// Записать текст
+	fwrite($f, $_POST["textblock"]); 
+
+	// Закрыть текстовый файл
+	fclose($f);
+
+	// Открыть файл для чтения и прочитать строку
+	$f = fopen("licens.txt", "r");
+
+	// Читать текст
+	echo fgets($f); 
+	fclose($f);
+
+	?>
+	
+	</body>
+
+	</html>
